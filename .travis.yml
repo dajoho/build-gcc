@@ -1,6 +1,6 @@
 os:
   - linux
-  - osx
+#  - osx
 
 dist: xenial
 
@@ -21,7 +21,7 @@ addons:
       - xz-utils
       - unzip
       - dos2unix
-      - libtool
+      - libtool-bin
   homebrew:
     update: true
     packages:
@@ -40,16 +40,16 @@ addons:
 
 compiler:
   - gcc
-  - clang
+#  - clang
 
 env:
-  - TARGET=i586-pc-msdosdjgpp PACKAGES="binutils gcc djgpp-2.05"
-  - TARGET=i586-pc-msdosdjgpp PACKAGES="gdb"
-  - TARGET=arm-eabi           PACKAGES="binutils gcc newlib"
-  - TARGET=arm-eabi           PACKAGES="gdb"
-  - TARGET=avr                PACKAGES="binutils gcc avr-libc"
+#  - TARGET=i586-pc-msdosdjgpp PACKAGES="binutils gcc djgpp-2.05"
+#  - TARGET=i586-pc-msdosdjgpp PACKAGES="gdb"
+#  - TARGET=arm-eabi           PACKAGES="binutils gcc newlib"
+#  - TARGET=arm-eabi           PACKAGES="gdb"
+#  - TARGET=avr                PACKAGES="binutils gcc avr-libc"
   - TARGET=avr                PACKAGES="gdb avarice simulavr avrdude"
-  - TARGET=ia16               PACKAGES="binutils gcc newlib"
+#  - TARGET=ia16               PACKAGES="binutils gcc newlib"
 
 before_install:
 #  - if [ $TRAVIS_OS_NAME = 'linux' ] && [ $CC = 'clang' ] ; then sudo apt-get -y install ; fi

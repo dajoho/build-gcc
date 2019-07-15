@@ -103,7 +103,7 @@ cd ${BASE}/build/
 if [ ! -z ${SIMULAVR_VERSION} ]; then
   echo "Building simulavr"
   cd simulavr/ || exit 1
-  ./bootstrap || exit 1
+  bash -x ./bootstrap || exit 1
   #mkdir -p build-avr/
   #cd build-avr/ || exit 1
   make distclean
